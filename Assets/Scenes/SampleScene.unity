@@ -726,11 +726,11 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1000
+  m_UseAutoMass: 1
+  m_Mass: 0.7134839
   m_LinearDrag: 10
   m_AngularDrag: 10
-  m_GravityScale: 28
+  m_GravityScale: 32
   m_Material: {fileID: 6200000, guid: a22b15572e6f1aa4b928039b144cf3c0, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -839,7 +839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountofJumps: 2
-  movementSpeed: 10
+  movementSpeed: 15
   jumpforce: 70
   groundCheckRadius: 0.3
   wallCheckDistance: 0.3
