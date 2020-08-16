@@ -730,7 +730,7 @@ Rigidbody2D:
   m_Mass: 0.7134839
   m_LinearDrag: 10
   m_AngularDrag: 10
-  m_GravityScale: 32
+  m_GravityScale: 20
   m_Material: {fileID: 6200000, guid: a22b15572e6f1aa4b928039b144cf3c0, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -843,9 +843,13 @@ MonoBehaviour:
   groundCheckRadius: 0.3
   wallCheckDistance: 0.78
   wallSlideSpeed: 2
-  movementForceInAir: 0
-  airDragMultiplier: 10
+  movementForceInAir: 80
+  airDragMultiplier: 1
   variableJumpHeightMultiplier: 0.5
+  wallHopForce: 25
+  wallJumpForce: 50
+  wallHopDirection: {x: 1, y: 0.5}
+  wallJumpDirection: {x: 1, y: 2}
   groundCheck: {fileID: 1288346971}
   wallCheck: {fileID: 1907444919}
   whatIsGround:
