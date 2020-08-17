@@ -6,7 +6,7 @@ public class PlayerControl : MonoBehaviour
 {
 
     private int amountOfJumpsLeft;
-    private int facingDirection = 2;
+    private int facingDirection = 1;
 
     private float movementInputDirection;
 
