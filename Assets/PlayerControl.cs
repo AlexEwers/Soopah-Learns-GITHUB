@@ -71,6 +71,7 @@ public class PlayerControl : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatisGround);
         isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsWall);
+       
     }
 
     private void CheckIfWallSliding()
@@ -121,7 +122,7 @@ public class PlayerControl : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeightMultiplier);
         }
     }
-    private void Jump()
+    private void Jump()  //For jumpimg
     {
         if (canJump && !isWallSliding)
         {
@@ -146,7 +147,7 @@ public class PlayerControl : MonoBehaviour
 
     private void CheckIfCanJump()
     {
-        if (isGrounded && rb.velocity.y <= 0)
+        if (isGrounded && rb.velocity.y <= 0 || isWallSliding)
         {
             amountOfJumpsLeft = amountOfJumps;
         }
