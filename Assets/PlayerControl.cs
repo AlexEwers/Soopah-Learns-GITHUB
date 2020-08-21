@@ -24,7 +24,7 @@ public class PlayerControl : MonoBehaviour
     
 
     public float movementSpeed = 10.0f;
-    public float jumpforce = 10.0f;
+    public float jumpforce;
     public float groundCheckRadius;
     public float wallCheckDistance;
     public float wallSlideSpeed;
@@ -134,7 +134,7 @@ public class PlayerControl : MonoBehaviour
             isWallSliding = false;
             amountOfJumpsLeft--;
             Vector2 forceToAdd = new Vector2(WallHopForce * wallHopDirection.x * -facingDirection, WallHopForce * wallHopDirection.y);
-            rb.AddForce(forceToAdd, ForceMode2D.Impulse);
+            rb.velocity = new Vector2(rb.velocity.y, jumpforce);
         }
         else if((isWallSliding || isTouchingWall) && movementInputDirection != 0 && canJump) //Wall Jump
         {
@@ -197,7 +197,7 @@ public class PlayerControl : MonoBehaviour
     {
         if (!isWallSliding)
         {
-            facingDirection *= 1;
+            facingDirection *= -1;
             isFacingRight = !isFacingRight;
             transform.Rotate(0.0f, 180f, 0.0f);
         }
