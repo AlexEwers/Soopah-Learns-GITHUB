@@ -18,7 +18,7 @@ public class PlayerControl : MonoBehaviour
     private bool isWallSliding;
 
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     public int amountOfJumps = 2;
 
@@ -87,7 +87,7 @@ public class PlayerControl : MonoBehaviour
     }
 
 
-    private void CheckMovementDirection() //Does the moving
+    public void CheckMovementDirection() //Does the moving
     {
         if (isFacingRight && movementInputDirection < 0)
         {
@@ -163,7 +163,7 @@ public class PlayerControl : MonoBehaviour
     }
 
 
-    private void ApplyMovement() //Speed of movement
+    public void ApplyMovement() //Speed of movement
     {
         if (isGrounded)
         {
